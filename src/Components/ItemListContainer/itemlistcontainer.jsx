@@ -3,7 +3,7 @@ import React from 'react';
 const ItemListContainer = (props) => {
   return (
     <div>
-      <h2>{props.greeting}</h2>
+      <h1 className='text-center'>{props.greeting}</h1>
     </div>
   );
 };
