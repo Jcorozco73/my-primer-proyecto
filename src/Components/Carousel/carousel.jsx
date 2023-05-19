@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import logo from './Assets/logo'
-
-
+import logo from '../../Assets/categoria1.jpg'
+import logo1 from '../../Assets/categoria2.jpg'
+import logo2 from '../../Assets/categoria3.jpg'
 
 
 function UncontrolledExample() {
@@ -10,8 +10,11 @@ function UncontrolledExample() {
     <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src= "holder.js/800x400?text=First slide&bg=373940"
+        width={100}
+        height={400}
+        className="d-block w-100"
+        src={logo} 
+          //"holder.js/800x400?text=First slide&bg=373940"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -20,9 +23,11 @@ function UncontrolledExample() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={logo}
+        <img 
+        width={100}
+        height={400}
+        className="d-block w-100"
+          src={logo1}
           //"holder.js/800x400?text=First slide&bg=373940"
           alt="Second slide"
         />
@@ -34,8 +39,11 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+        width={100}
+        height={400}
+        className="d-block w-100"
+        src= {logo2}
+          //"holder.js/800x400?text=Third slide&bg=20232a"
           alt="Third slide"
         />
 
