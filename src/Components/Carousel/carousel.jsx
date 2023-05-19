@@ -1,5 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import logo from './Assets/logo'
+
+
 
 
 function UncontrolledExample() {
@@ -8,7 +11,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
+          src= "holder.js/800x400?text=First slide&bg=373940"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -19,7 +22,8 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          src={logo}
+          //"holder.js/800x400?text=First slide&bg=373940"
           alt="Second slide"
         />
 
