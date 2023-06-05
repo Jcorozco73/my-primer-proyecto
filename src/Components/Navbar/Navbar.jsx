@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavBar, Container,} from 'react-bootstrap';
+import { NavBar, Container} from 'react-bootstrap';
 import CartWidget from '../Cartwidgets/cartwidgets';
 import './Navbar.scss'
-import { BranNav } from './Navbar/LogoNav';
+import  BranNav  from './LogoNav';
 
 
 const Navbar = () =>  {

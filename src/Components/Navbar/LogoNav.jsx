@@ -1,12 +1,10 @@
 import React from 'react';
-import {LogoNav} from '../../Assets/Svg/logo.png'
-
 
 const BranNav = () => {
     
     return(
       <div className='Logo'>
-      <LogoNav />
+      <img src= {process.env.PUBLIC_URL + '/logo.png'} alt='logoNav'/>
       </div>
   
     )
