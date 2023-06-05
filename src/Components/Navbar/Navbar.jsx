@@ -1,11 +1,12 @@
 import React from 'react';
-import { NavBar, Container} from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/NavBar';
 import CartWidget from '../Cartwidgets/cartwidgets';
 import './Navbar.scss'
 import  BranNav  from './LogoNav';
 
 
-const Navbar = () =>  {
+const NavBar = () =>  {
   return (
     <Navbar bg="primary" expand="lg" className='top-menu'>
     <BranNav />

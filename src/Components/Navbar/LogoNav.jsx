@@ -4,7 +4,7 @@ const BranNav = () => {
     
     return(
       <div className='Logo'>
-      <img src= {process.env.PUBLIC_URL + '/logo.png'} alt='logoNav'/>
+      <img src= {process.env.PUBLIC_URL + '/logo.png'} alt='LogoNav'/>
       </div>
   
     )
