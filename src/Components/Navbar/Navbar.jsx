@@ -1,11 +1,14 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { NavBar, Container,} from 'react-bootstrap';
 import CartWidget from '../Cartwidgets/cartwidgets';
+import './Navbar.scss'
+import { BranNav } from './Navbar/LogoNav';
 
 
-const NavBar = () => {
+const Navbar = () =>  {
   return (
-    <Navbar bg="primary" expand="lg">
+    <Navbar bg="primary" expand="lg" className='top-menu'>
+    <BranNav />
       <Container>
         <Navbar.Brand href="#home">Mi Tienda</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -23,9 +26,12 @@ const NavBar = () => {
         <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">
           <CartWidget />
         </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-};
 
-export default NavBar;
+      </Container> 
+    </Navbar>
+    
+ 
+  )
+};
+export default NavBar
+
