@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import pasta1 from '../../Assets/pasta1.jpg'
-import pasta2 from '../../Assets/pasta2.jpg'
-import pasta3 from '../../Assets/pasta3.jpg'
+import pasta1 from '/Assets/pasta1.jpg'
+import pasta2 from '/Assets/pasta2.jpg'
+import pasta3 from '/Assets/pasta3.jpg'
 
 
 function UncontrolledExample() {
