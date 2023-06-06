@@ -6,11 +6,12 @@ import './Navbar.scss'
 import  BranNav  from './LogoNav';
 
 
+
 const NavBar = () =>  {
   return (
-    <Navbar bg="primary" expand="lg" className='top-menu'>
+    <Navbar bg="light"  expand="lg" className='top-menu'>
     <BranNav />
-      <Container>
+      <Container >
         <Navbar.Brand href="#home">Mi Tienda</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

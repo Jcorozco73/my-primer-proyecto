@@ -1,4 +1,5 @@
 import React from 'react';
+import './Navbar.scss'
 
 const BranNav = () => {
     
@@ -6,9 +7,9 @@ const BranNav = () => {
       <div className='Logo'>
       <img src= {process.env.PUBLIC_URL + '/logo.png'} alt='LogoNav'/>
       </div>
-  
+    
     )
 
 }
 
-export {BranNav}
+export default BranNav

@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import logo from '../../Assets/categoria1.jpg'
-import logo1 from '../../Assets/categoria2.jpg'
-import logo2 from '../../Assets/categoria3.jpg'
+import pasta1 from '../../Assets/pasta1.jpg'
+import pasta2 from '../../Assets/pasta2.jpg'
+import pasta3 from '../../Assets/pasta3.jpg'
 
 
 function UncontrolledExample() {
@@ -13,7 +13,7 @@ function UncontrolledExample() {
         width={100}
         height={400}
         className="d-block w-100"
-        src={logo} 
+        src={pasta1} 
           //"holder.js/800x400?text=First slide&bg=373940"
           alt="First slide"
         />
@@ -27,7 +27,7 @@ function UncontrolledExample() {
         width={100}
         height={400}
         className="d-block w-100"
-          src={logo1}
+          src={pasta2}
           //"holder.js/800x400?text=First slide&bg=373940"
           alt="Second slide"
         />
@@ -42,15 +42,15 @@ function UncontrolledExample() {
         width={100}
         height={400}
         className="d-block w-100"
-        src= {logo2}
+        src= {pasta3}
           //"holder.js/800x400?text=Third slide&bg=20232a"
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>seguir</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            
           </p>
         </Carousel.Caption>
       </Carousel.Item>
