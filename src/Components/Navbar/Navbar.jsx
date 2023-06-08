@@ -12,16 +12,19 @@ const NavBar = () =>  {
     <Navbar bg="light"  expand="lg" className='top-menu'>
     <BranNav />
       <Container >
-        <Navbar.Brand href="#home">Mi Tienda</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Brand href="#home">Mi Tienda</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
+      <Navbar.Brand href="#nosotros">Nosotros</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      
         <Navbar.Brand href="#productos">Productos</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Brand href="#contacto">Contacto</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <Navbar.Brand href="#blog">Blog</Navbar.Brand>
+        <Navbar.Brand href="#blog">Blog Cocina</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
 

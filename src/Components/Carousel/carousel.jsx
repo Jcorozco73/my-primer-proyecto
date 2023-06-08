@@ -1,8 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import pasta1 from '/Assets/pasta1.jpg'
-import pasta2 from '/Assets/pasta2.jpg'
-import pasta3 from '/Assets/pasta3.jpg'
+
 
 
 function UncontrolledExample() {
@@ -10,10 +8,10 @@ function UncontrolledExample() {
     <Carousel>
       <Carousel.Item>
         <img
-        width={100}
+        width={300}
         height={400}
         className="d-block w-100"
-        src={pasta1} 
+        src={process.env.PUBLIC_URL+ "/Assets/pasta1.jpg"}
           //"holder.js/800x400?text=First slide&bg=373940"
           alt="First slide"
         />
@@ -24,10 +22,10 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img 
-        width={100}
+        width={300}
         height={400}
         className="d-block w-100"
-          src={pasta2}
+        src={process.env.PUBLIC_URL+ "/Assets/pasta2.jpg"}
           //"holder.js/800x400?text=First slide&bg=373940"
           alt="Second slide"
         />
@@ -39,10 +37,10 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-        width={100}
+        width={300}
         height={400}
         className="d-block w-100"
-        src= {pasta3}
+        src={process.env.PUBLIC_URL+ "/Assets/pasta3.jpg"}
           //"holder.js/800x400?text=Third slide&bg=20232a"
           alt="Third slide"
         />

@@ -1,0 +1,1 @@
+export const urlApiProducts = "https://api.jsonserve.com/8I8kxB"
