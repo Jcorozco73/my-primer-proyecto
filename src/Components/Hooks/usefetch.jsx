@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function useFetch(url, options) {
+export default function useFetch(url) {
 
     const [loading, setLoading] = useState(true)
     const [result, setResult] = useState(null)
@@ -9,7 +9,7 @@ export default function useFetch(url, options) {
     useEffect(() => {
         (async () => {
             try {
-                const res = await fetch(url,options)
+                const res = await fetch(url)
                 const json = await res.json()
                 setResult(json)
                 setLoading(false)
@@ -19,7 +19,7 @@ export default function useFetch(url, options) {
             }
         })()
 
-        }, [options, url])
+        }, [ url ])
         return {loading, result, error}
     
 }
