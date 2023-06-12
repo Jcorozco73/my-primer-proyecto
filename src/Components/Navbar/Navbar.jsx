@@ -4,11 +4,14 @@ import Navbar from 'react-bootstrap/NavBar';
 import CartWidget from '../Cartwidgets/cartwidgets';
 import './Navbar.scss'
 import  BranNav  from './LogoNav';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 
 const NavBar = () =>  {
+ 
   return (
+   
     <Navbar bg="light" expand="lg" className='top-menu'>
     <BranNav />
       <Container >
@@ -26,7 +29,6 @@ const NavBar = () =>  {
 
         <Navbar.Brand href="#blog">Blog Cocina</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
 
         <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">
           <CartWidget />
