@@ -5,12 +5,7 @@ import ItemListContainer from './Components/ItemListContainer/itemlistcontainer'
 import Carousel from './Components/Carousel/carousel';
 import useFetch from './Components/Hooks/usefetch';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
-import { MiTienda } from './Components/Home/Home';
-
-
-
-
-
+import Home from './pages/Home';
 
 
 function App() {
@@ -23,26 +18,19 @@ function App() {
     <div className="App">
     
     <Router>
-        <Routes>
-        
-        <Route path="/" element={< MiTienda/>}/>
-        <Route path="/Nosotros" element={<Nosotros />}/>
-        <Route path="/Productos" element={<Productos />}/>
-        <Route path="/Contacto" element={<Contacto />}/>
-        <Route path="/Blog Cocin" element={<BlogCocina />}/>
-        </Routes>
+    <NavBar />
+    <Routes>
+    <Route path="/" element={<Home />}></Route>
+    <Route path="/productos" element={<ItemListContainer greeting="¡Bienvenido a La Fabrica!"/>}/>
+    
+    </Routes>
     
     </Router>
-
-
     
-    <NavBar />
-    <ItemListContainer greeting="¡Bienvenido a La Fabrica!" />
     <Carousel />
+    
     <Products products={products} />
-      
-
-    </div>
+        </div>
   );
 }
 

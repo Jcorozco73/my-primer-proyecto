@@ -15,20 +15,20 @@ const NavBar = () =>  {
     <Navbar bg="light" expand="lg" className='top-menu'>
     <BranNav />
       <Container >
-     <Navbar.Brand as={Link}to ="/Home">Mi Tienda</Navbar.Brand>
+     <Navbar.Brand as={Link}to ="/">Mi Tienda</Navbar.Brand>
      <Navbar.Toggle aria-controls="basic-navbar-nav" />
      
       <Navbar.Brand as={Link}to="/Nosotros">Nosotros</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      
       
        <Navbar.Brand as={Link}to="/Productos">Productos</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" /> 
+         
        
         <Navbar.Brand as={Link}to="/Contacto">Contacto</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        
        
-        <Navbar.Brand as={Link}to="/Blog Cocina">Blog Cocina</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand as={Link}to="/BlogdeCocina">Blog Cocina</Navbar.Brand>
+        
     
         <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">
           <CartWidget />
