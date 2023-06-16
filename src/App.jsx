@@ -5,7 +5,7 @@ import ItemListContainer from './Components/ItemListContainer/itemlistcontainer'
 import Carousel from './Components/Carousel/carousel';
 import useFetch from './Components/Hooks/usefetch';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
-import { Mi tienda } from './Components/Home/Home';
+import { MiTienda } from './Components/Home/Home';
 
 
 
@@ -25,7 +25,11 @@ function App() {
     <Router>
         <Routes>
         
-        <Route path="/" element={< Mi tienda/>}/>
+        <Route path="/" element={< MiTienda/>}/>
+        <Route path="/Nosotros" element={<Nosotros />}/>
+        <Route path="/Productos" element={<Productos />}/>
+        <Route path="/Contacto" element={<Contacto />}/>
+        <Route path="/Blog Cocin" element={<BlogCocina />}/>
         </Routes>
     
     </Router>
