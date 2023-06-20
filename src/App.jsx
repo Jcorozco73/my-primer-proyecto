@@ -19,17 +19,18 @@ function App() {
     
     <Router>
     <NavBar />
+    <Carousel />
     <Routes>
-    <Route path="/" element={<Home />}></Route>
+    <Route path="/" element={<Home />} />
     <Route path="/productos" element={<ItemListContainer greeting="¡Bienvenido a La Fabrica!"/>}/>
+    <Route path="/category/:id" element={<ItemListContainer />} />
     
     </Routes>
     
     </Router>
     
-    <Carousel />
     
-    <Products products={products} />
+    
         </div>
   );
 }

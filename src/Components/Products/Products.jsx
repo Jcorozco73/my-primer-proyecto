@@ -10,16 +10,13 @@ export default function Products (props) {
         products: { loading, result, error } 
     } = props
 
-  
-
     return (
         <Container>
             <Row>
             {loading || !result  ? (
                     <Loading />
                 ) : (
-                 result.map((product, index) =>  <Product key = {index} product= {product} />)
-              
+                 result.map((product, index) =>  <Product key = {index} product= {product} />) 
               )}
             </Row>
         </Container>

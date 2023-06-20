@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import Item from '../Products/Products';
 
 export const ItemList = ({ productosFetch }) => {
@@ -11,4 +11,4 @@ export const ItemList = ({ productosFetch }) => {
       </div>
     </div>
   );
-};
+}; */
