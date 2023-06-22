@@ -1,16 +1,16 @@
-import {items} from '../Tmp/data'
+import {products} from '../Tmp/data'
 
-const getItems = async() => {
+const getProducts = async(id) => {
 
     return new Promise((resolve, reject) => {
-        resolve(items)
+        resolve(products.filter((product) => product.id === id))
 
     })
     }
-const getItem = async(id) => {
+const getProduct = async(id) => {
     return new Promise((resolve, reject) =>{
-        resolve(items.find((item)=> item.id === id));
+        resolve(products.find((product)=> product.id === id));
     })
 }    
 
-export { getItems, getItem}
+export { getProducts, getProduct }
