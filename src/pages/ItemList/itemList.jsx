@@ -16,6 +16,8 @@ const ItemList = ({products}) => {
         image={product.image}
         id={product.id}
         stock={product.stock} 
+        onItemClicked={product.onItemClicked}
+        textButtom={product.textButtom}
         />
         </Col>
       ))}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/NavBar';
+import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../Cartwidgets/cartwidgets';
 import './Navbar.scss'
 import  BranNav  from './LogoNav';

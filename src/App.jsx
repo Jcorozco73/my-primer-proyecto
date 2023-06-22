@@ -1,17 +1,9 @@
 import React from 'react';
 import NavBar from './Components/Navbar/Navbar';
-import Products from './Components/Products/Products'
 import { ItemListContainer } from './pages';
 import Carousel from './Components/Carousel/carousel';
-import useFetch from './Components/Hooks/usefetch';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
-
-
-
-
-
-
-
+import { ItemDetailContainer } from './pages/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
 
@@ -25,18 +17,15 @@ function App() {
     <Router>
     <NavBar />
     <Carousel />
+
     <Routes>
-    <Route path="/" element={<ItemListContainer />} />
     <Route path="/productos" element={<ItemListContainer greeting="¡Bienvenido a La Fabrica!"/>}/>
     <Route path="/category/:id" element={<ItemListContainer />} />
-    
-    
+    <Route path="/item-detail/:id" element={<ItemDetailContainer />} />
     </Routes>
     
     </Router>
-    
-    
-    
+     
         </div>
   );
 }

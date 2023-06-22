@@ -4,9 +4,8 @@ import { useParams, } from 'react-router-dom';
 import { getCategories } from '../../services/categories';
 import { getProducts } from '../../services/items';
 import { Container } from "react-bootstrap"
-
 import { ItemList } from '../ItemList/itemList';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 
 
@@ -29,9 +28,6 @@ const ItemListContainer = () => {
 
   },[id])
 
-
-
-
   return (
     <>
     <h1 className='text-center'>Bienvenido a la Fabrica {id} </h1> 
@@ -49,8 +45,13 @@ const ItemListContainer = () => {
         </ul>
         </nav>
         
-        <ItemList products={products} />
-        
+        <ItemList products= {products.map((product) => ({
+            ...product,
+               onItemClicked: () => Navigate(`/item-details/${product.id}`),
+               textButtom: "Ver mas"
+          
+          }))}
+        />
      </Container> 
     
     </>
