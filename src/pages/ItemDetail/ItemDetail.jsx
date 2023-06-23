@@ -1,9 +1,20 @@
-import { Button } from "react-bootstrap"
+
+import { ItemCount } from "../ItemCount/ItemCount"
+import { useState } from "react";
 
 
 
 
-const ItemDetail = ({id, name, description, category, price, stock, image, onItemClicked, textButtom}) => {
+    const ItemDetail = ({id, name, description, category, price, stock, image, onItemClicked, textButtom}) => {
+
+        const [quantity, setQuantity] = useState()
+
+        const handlerAdd = (quantity) => {
+            setQuantity(quantity);
+            
+        };
+
+
 
 
     return (
@@ -12,6 +23,7 @@ const ItemDetail = ({id, name, description, category, price, stock, image, onIte
         <h2>Productos</h2>
         <img src={image} className="card-img-top" alt="ImageCards" />
         <div className="card-body">
+          <p className="card-text-title">{id}</p>
           <p className="card-text-title">{name}</p>
           <p className="card-text-title">{category}</p>
           <p className="card-text">{description}</p>
@@ -20,7 +32,7 @@ const ItemDetail = ({id, name, description, category, price, stock, image, onIte
          
  
         <div className="btn">
-        <Button className="btn btn-primary">Añadir al Carrito</Button>
+        <ItemCount stock={stock} initial={1} onAdd={handlerAdd} />
         </div>
         </div>
       </div>   
