@@ -3,6 +3,7 @@ import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { getProduct } from "../../services/items"
 import { useState } from "react"
 import { useEffect } from "react"
+import { Spinner } from 'react-bootstrap'
 
 const ItemDetailContainer =() => {
     
@@ -15,7 +16,11 @@ const ItemDetailContainer =() => {
         })
     }, [id])
 
-    if(!product) return <div>Cargando...</div>
+    if(!product) return
+     <div>
+    <Spinner animation='border' role='status' />
+    Cargando...
+    </div>
 
     return (
 

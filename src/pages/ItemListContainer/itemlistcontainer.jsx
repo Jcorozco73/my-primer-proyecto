@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams, } from 'react-router-dom';
 import { getCategories } from '../../services/categories';
 import { getProducts } from '../../services/items';
-import { Container } from "react-bootstrap"
+import { Container, Navbar } from "react-bootstrap"
 import { ItemList } from '../ItemList/itemList';
 import { Link, Navigate } from 'react-router-dom';
 
@@ -30,24 +30,26 @@ const ItemListContainer = () => {
 
   return (
     <>
-    <h1 className='text-center'>Bienvenido a la Fabrica {id} </h1> 
+    <h1 className='text-center'>Bienvenido a la Fabrica  </h1> 
      <Container>
-
-     <nav>
-        <ul>
+     <h4>Categorias</h4>
+     <Navbar bg="light" expand="lg" className='top-menu'>
+        <Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         {categories.map((category) => (
-          <li>
+          <Navbar.Brand>
           <Link to= {`/category/${category.id}`}> 
           {category.name} 
           </Link>
-          </li>
+          </Navbar.Brand>
           ))}
-        </ul>
-        </nav>
+        </Navbar.Brand>
+        </Navbar>
+        
         
         <ItemList products= {products.map((product) => ({
             ...product,
-               onItemClicked: () => Navigate(`/item-details/${product.id}`),
+               onItemClicked: () => Navigate(`/item-detail/${product.id}`),
                textButtom: "Ver mas"
           
           }))}
