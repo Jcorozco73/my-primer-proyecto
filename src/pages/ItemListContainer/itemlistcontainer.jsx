@@ -30,7 +30,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-    <h1 className='text-center'>Bienvenido a la Fabrica  </h1> 
+    <h1 className='text-center'>Bienvenido a la Fabrica</h1> 
      <Container>
      <h4>Categorias</h4>
      <Navbar bg="light" expand="lg" className='top-menu'>
