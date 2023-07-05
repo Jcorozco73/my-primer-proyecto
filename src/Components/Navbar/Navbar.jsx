@@ -25,6 +25,8 @@ const NavBar = () =>  {
         
        
         <Navbar.Brand as={Link}to="/BlogdeCocina">Blog Cocina</Navbar.Brand>
+
+        <Navbar.Brand as={Link}to="/Cart">Cart</Navbar.Brand>
         
     
         <Navbar.Collapse className='justify-content-end' id="basic-navbar-nav">

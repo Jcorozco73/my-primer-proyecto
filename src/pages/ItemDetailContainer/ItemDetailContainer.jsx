@@ -9,6 +9,7 @@ const ItemDetailContainer =() => {
     
     const {id} = useParams()
     const [product, SetProduct] = useState()
+    const [added, SetAdded] = useState(false)
 
     useEffect(() => {
         getProduct(id).then((data) =>{
