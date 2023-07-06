@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom";
 import { ItemCount } from "../ItemCount/ItemCount"
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../Components/Context/CartContext";
 
 
 
 
-    const ItemDetail = ({id, name, description, added, category, price, stock, image, onItemClicked, textButtom}) => {
+const ItemDetail = ({id, name, description, added, category, price, stock, image, onItemClicked, textButtom}) => {
+
+      const { addToCart }= useContext(CartContext)
 
         const [quantity, setQuantity] = useState()
 
         const handlerAdd = (quantity) => {
             setQuantity(quantity);
-            
+            const product = {id, name, description, added, category, price, stock, image} 
+              addToCart(product, quantity)
+
         };
-
-
 
 
     return (
@@ -41,4 +44,4 @@ import { useState } from "react";
 
 }
 
-export {ItemDetail}
+export {ItemDetail}  

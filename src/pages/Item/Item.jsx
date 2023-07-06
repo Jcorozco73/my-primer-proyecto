@@ -13,7 +13,7 @@ const Item = ({name, description, id, category, image, price, stock, onItemClick
           <p className="card-text">{description}</p>
           <p className="card-text-title">Price: ${price.toFixed(2)}</p>
           <p className="card-text">Stock: {stock}</p>
-        <Button as={Link}to= {(`/item-detail/${id}`)}onClick={onItemClicked}>
+        <Button as={Link}to= {(`/item-detail/${id}`)}>
         {textButtom}
         </Button>
  
