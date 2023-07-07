@@ -4,13 +4,13 @@ import { getProduct } from "../../services/items"
 import { useState } from "react"
 import { useEffect } from "react"
 import { Spinner } from 'react-bootstrap'
-import { CartContext } from "../../Components/Context/CartContext"
+
 
 const ItemDetailContainer =() => {
     
     const {id} = useParams()
     const [product, SetProduct] = useState()
-    const [added, SetAdded] = useState(false)
+    
 
     
 

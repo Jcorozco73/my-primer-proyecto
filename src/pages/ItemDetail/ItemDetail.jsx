@@ -6,7 +6,16 @@ import { CartContext } from "../../Components/Context/CartContext";
 
 
 
-const ItemDetail = ({id, name, description, added, category, price, stock, image, onItemClicked, textButtom}) => {
+const ItemDetail = ({
+    id,
+    name, 
+    description,
+    added, 
+    category,
+    price, 
+    stock, 
+    image, 
+    }) => {
 
       const { addToCart }= useContext(CartContext)
 
@@ -35,7 +44,7 @@ const ItemDetail = ({id, name, description, added, category, price, stock, image
          
  
         <div className="btn">
-        {added ? <Link to='/cart'> Añadir al Carrito</Link> :  <ItemCount stock={stock} initial={1} onAdd={handlerAdd} /> } 
+        {quantity ? <Link to='/cart'> Añadir al Carrito</Link> :  <ItemCount stock={stock} initial={1} onAdd={handlerAdd} /> } 
         </div>
         </div>
       </div>   

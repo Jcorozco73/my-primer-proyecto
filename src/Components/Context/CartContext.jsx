@@ -24,15 +24,25 @@ export const CartContext = createContext()
     }
 
     const isInCart = (id) => {
-      return  cartArray.some(elem => elem.id === id)
+      return  cartArray.some(product => product.id === id) ? true: false
         //comprobar si el item esta en la cesta o no
     } 
-
+    const addProduct =(item, quantity) =>{
+        if(isInCart(item.id)){
+          SetCartArray (cartArray.map(product =>{
+            return product.id === item.id ?{...product,quantity:product.quantity + quantity} : product
+          }));
+    
+        }else{
+          SetCartArray ([...cartArray,{...item,quantity}]);
+        }
+      }
     const value = {
         cartArray,
         addToCart,
         deleteItem,
-        clearCart
+        clearCart,
+        addProduct
     }
   return (
     <CartContext.Provider value={value}>
