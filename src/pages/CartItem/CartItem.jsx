@@ -11,16 +11,16 @@ const CartItem = ({product, deleteItem}) => {
 
         <Row>
         <Col md={6}>
-            {product.producto.name}
+            {product.name}
         </Col>
         <Col md={6}>
-            {product.count}
+            {product.quantity}
         </Col>
         <Col md={6}>
-            {product.producto.price.toFixed(2)}
+            {product.price.toFixed(2)}
         </Col>
         <Col md={6}>
-            <Button variant='danger' onClick={() => deleteItem(product.producto.id)}>Delete</Button>
+            <Button variant='danger' onClick={() => deleteItem(product.id)}>Delete</Button>
         </Col>
         
         </Row>

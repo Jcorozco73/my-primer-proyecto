@@ -9,7 +9,7 @@ const CartContainer = () => {
 
     return (
         <div>
-        {cartArray.map(product => <CartItem key={product.producto.id} product={product} deleteItem={deleteItem} />)}
+        {cartArray.map(product => <CartItem key={product.id} product={product} deleteItem={deleteItem} />)}
         </div>
     )
 }

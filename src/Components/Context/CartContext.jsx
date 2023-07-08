@@ -6,16 +6,19 @@ export const CartContext = createContext()
 
     const [cartArray, SetCartArray] = useState([])
 
-    const addToCart =(product, count) => {
-        const newObj = {
-            producto: product,
-            cantidad:count
-        }
-        SetCartArray([...cartArray, newObj])
+    const addToCart = (item, quantity) =>{
+      if(isInCart(item.id)){
+        SetCartArray (cartArray.map(product =>{
+          return product.id === item.id ?{...product,quantity:product.quantity + quantity} : product
+        }));
+  
+      }else{
+        SetCartArray ([...cartArray,{...item,quantity}]);
+      }
     }
 
     const deleteItem =(id) => {
-        const updateCart = cartArray.filter(elem => elem.producto.id !== id)
+        const updateCart = cartArray.filter(elem => elem.id !== id)
         SetCartArray(updateCart)
     }
 
@@ -27,22 +30,20 @@ export const CartContext = createContext()
       return  cartArray.some(product => product.id === id) ? true: false
         //comprobar si el item esta en la cesta o no
     } 
-    const addProduct =(item, quantity) =>{
-        if(isInCart(item.id)){
-          SetCartArray (cartArray.map(product =>{
-            return product.id === item.id ?{...product,quantity:product.quantity + quantity} : product
-          }));
-    
-        }else{
-          SetCartArray ([...cartArray,{...item,quantity}]);
-        }
-      }
+    const getQuantity = () => {
+      let cant = 0
+      cartArray.forEach((e) => cant += e.quantity)
+      return cant
+      };
+   
+    console.log(cartArray)
     const value = {
         cartArray,
         addToCart,
         deleteItem,
         clearCart,
-        addProduct
+        getQuantity
+        
     }
   return (
     <CartContext.Provider value={value}>
