@@ -35,6 +35,13 @@ export const CartContext = createContext()
       cartArray.forEach((e) => cant += e.quantity)
       return cant
       };
+
+      const getTotal = () => {
+        let cant = 0
+        cartArray.forEach((e) => cant += e.quantity * e.price)
+        return cant
+        };
+
    
     console.log(cartArray)
     const value = {
@@ -42,7 +49,8 @@ export const CartContext = createContext()
         addToCart,
         deleteItem,
         clearCart,
-        getQuantity
+        getQuantity,
+        getTotal
         
     }
   return (

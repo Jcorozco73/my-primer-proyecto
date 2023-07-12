@@ -4,6 +4,10 @@ import { getProduct } from "../../services/items"
 import { useState } from "react"
 import { useEffect } from "react"
 import { Spinner } from 'react-bootstrap'
+import { collection, doc, getDoc } from "firebase/firestore"
+import { db } from "../../services/Resource/Firebase"
+
+
 
 
 const ItemDetailContainer =() => {
@@ -11,14 +15,28 @@ const ItemDetailContainer =() => {
     const {id} = useParams()
     const [product, SetProduct] = useState()
     
+    useEffect(()=>{
+        const coleccionProd = collection(db, "products")
+        const referenciaDoc = doc(coleccionProd, id)
+        getDoc(referenciaDoc)
+        .then((result)=>{
+          SetProduct({
+            id:result.id,
+            ...result.data()
+          })
+        })
+        .catch((error)=> console.log(error))
+       
+      }, [id])
+     
 
     
 
-    useEffect(() => {
+   /*  useEffect(() => {
         getProduct(id).then((data) =>{
             SetProduct(data)
         })
-    }, [id])
+    }, [id]) */
 
  
 

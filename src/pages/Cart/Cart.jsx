@@ -4,12 +4,15 @@ import CartItem from '../CartItem/CartItem'
 
 
 const CartContainer = () => {
-    const {cartArray, deleteItem} = useContext(CartContext)
+    const {cartArray, deleteItem, getTotal} = useContext(CartContext)
 
 
     return (
         <div>
-        {cartArray.map(product => <CartItem key={product.id} product={product} deleteItem={deleteItem} />)}
+        {cartArray.map(product => <CartItem key={product.id}
+             product={product} deleteItem={deleteItem} />)}
+             <p>Total a pagar: ${getTotal()}</p>
+
         </div>
     )
 }

@@ -31,9 +31,25 @@ const ItemListContainer = () => {
   },[id])
  */
 
+  useEffect(()=>{
+    const data = collection(db,"categories")
+    getDocs(data)
+    .then((result) => {
+      const lista = result.docs.map((cat) =>{
+        return {
+          id: cat.id,
+          ...cat.data(),
+        }
+      })
+      setCategories(lista)
+    })
+    .catch((error) => console.log(error))
+  },[])
+
+
   useEffect(() => {
     setProducts(true)
-    const productos = categories ? query(collection(db, "products"), where("category", "==", id)) : collection(db,"products")
+    const productos = id ? query(collection(db, "products"), where("category", "==", id)) : collection(db,"products")
     getDocs(productos)
     .then((result) => {
       const lista = result.docs.map((producto) =>{
@@ -42,12 +58,12 @@ const ItemListContainer = () => {
           ...producto.data(),
         }
       })
-      setProductList(lista)
+      setProducts(lista)
     })
     .catch((error) => console.log(error))
-    .finally(()=> setProducts(false))
-  }, [])
-  
+    
+  }, [id])
+  console.log(products)
   return (
     <>
     <h1 className='text-center'>Bienvenido a la Fabrica</h1> 

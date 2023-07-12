@@ -16,10 +16,6 @@ const Item = ({name, description, id, category, image, price, stock, onItemClick
         <Button as={Link}to= {(`/item-detail/${id}`)}>
         {textButtom}
         </Button>
- 
-        <div className="btn">
-        <Button className="btn btn-primary">Añadir al Carrito</Button>
-        </div>
         </div>
       </div>   
     )
