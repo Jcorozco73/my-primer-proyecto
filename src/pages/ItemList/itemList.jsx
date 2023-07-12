@@ -5,8 +5,11 @@ const ItemList = ({products}) => {
 
   return (
     <Row>
+    
     {
+    
       products.map((product) => (
+        
         <Col>
         <Item
         name={product.name}
@@ -17,9 +20,12 @@ const ItemList = ({products}) => {
         id={product.id}
         stock={product.stock} 
         textButtom={product.textButtom}
+       
         />
+       
         </Col>
       ))}
+      
     </Row>
   )
       

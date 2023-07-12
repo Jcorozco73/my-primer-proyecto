@@ -48,7 +48,7 @@ const ItemListContainer = () => {
 
 
   useEffect(() => {
-    setProducts(true)
+    
     const productos = id ? query(collection(db, "products"), where("category", "==", id)) : collection(db,"products")
     getDocs(productos)
     .then((result) => {
@@ -72,10 +72,11 @@ const ItemListContainer = () => {
      <Navbar bg="light" expand="lg" className='top-menu'>
         <Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         {categories.map((category) => (
-          <Navbar.Brand>
-          <Link to= {`/category/${category.id}`}> 
-          {category.name} 
+          <Navbar.Brand key={category.id}>
+          <Link to= {`/category/${category.category}`}> 
+          {category.category} 
           </Link>
           </Navbar.Brand>
           ))}
@@ -83,13 +84,9 @@ const ItemListContainer = () => {
         </Navbar>
         
         
-        <ItemList products= {products.map((product) => ({
-            ...product,
-               onItemClicked: () => Navigate(`/item-detail/${product.id}`),
-               textButtom: "Ver mas"
-          
-          }))}
-        />
+        <ItemList products= {products} />
+
+   
      </Container> 
     
     </>
