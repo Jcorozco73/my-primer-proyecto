@@ -6,6 +6,8 @@ import { getProducts } from '../../services/items';
 import { Container, Navbar } from "react-bootstrap"
 import { ItemList } from '../ItemList/itemList';
 import { Link, Navigate } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../../services/Resource/Firebase';
 
 
 
@@ -18,7 +20,7 @@ const ItemListContainer = () => {
   const [categories, setCategories] = useState([])
   
   
-  useEffect (() => {
+  /* useEffect (() => {
     getProducts(id).then((data) => {
       setProducts(data)
       })
@@ -27,7 +29,25 @@ const ItemListContainer = () => {
       })
 
   },[id])
+ */
 
+  useEffect(() => {
+    setProducts(true)
+    const productos = categories ? query(collection(db, "products"), where("category", "==", id)) : collection(db,"products")
+    getDocs(productos)
+    .then((result) => {
+      const lista = result.docs.map((producto) =>{
+        return {
+          id: producto.id,
+          ...producto.data(),
+        }
+      })
+      setProductList(lista)
+    })
+    .catch((error) => console.log(error))
+    .finally(()=> setProducts(false))
+  }, [])
+  
   return (
     <>
     <h1 className='text-center'>Bienvenido a la Fabrica</h1> 
