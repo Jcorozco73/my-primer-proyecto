@@ -2,14 +2,13 @@ import React from 'react';
 import {
   MDBFooter,
   MDBContainer,
-
-  MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
+import {BsFacebook, BsTwitter, BsGoogle, BsLinkedin, BsInstagram, BsGithub} from 'react-icons/bs'
 
 const Footer =()=> {
   return (
-    <MDBFooter className='text-center text-white' style={{ backgroundColor: '#f1f1f1' }}>
+    <MDBFooter className='text-center ' style={{ backgroundColor: '#f1f1f1' }}>
       <MDBContainer className='pt-4'>
         <section className='mb-4'>
           <MDBBtn
@@ -21,7 +20,7 @@ const Footer =()=> {
             href='#!'
             role='button'
           >
-          <MDBIcon fab className='fab fa-facebook-f' />
+          <BsFacebook/>
           
           </MDBBtn>
 
@@ -34,7 +33,7 @@ const Footer =()=> {
             href='#!'
             role='button'
           >
-            <MDBIcon fab className='fa-twitter' />
+           <BsTwitter/>
           </MDBBtn>
 
           <MDBBtn
@@ -46,7 +45,7 @@ const Footer =()=> {
             href='#!'
             role='button'
           >
-            <MDBIcon fab className='fa-google' />
+            <BsGoogle />
           </MDBBtn>
 
           <MDBBtn
@@ -58,7 +57,7 @@ const Footer =()=> {
             href='#!'
             role='button'
           >
-            <MDBIcon fab className='fa-instagram' />
+            <BsInstagram />
           </MDBBtn>
 
           <MDBBtn
@@ -70,7 +69,7 @@ const Footer =()=> {
             href='#!'
             role='button'
           >
-            <MDBIcon fab className='fa-linkedin' />
+            <BsLinkedin/>
           </MDBBtn>
 
           <MDBBtn
@@ -82,7 +81,7 @@ const Footer =()=> {
             href='#!'
             role='button'
           >
-            <MDBIcon fab className='fa-github' />
+            <BsGithub/>
           </MDBBtn>
         </section>
       </MDBContainer>
