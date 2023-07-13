@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
-import { getProduct } from "../../services/items"
 import { useState } from "react"
 import { useEffect } from "react"
 import { Spinner } from 'react-bootstrap'
