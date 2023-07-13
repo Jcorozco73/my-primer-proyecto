@@ -11,7 +11,7 @@ const CartContainer = () => {
         <div>
         {cartArray.map(product => <CartItem key={product.id}
              product={product} deleteItem={deleteItem} />)}
-             <p>Total a pagar: ${getTotal()}</p>
+             <p className='fw-bold'>Total a pagar: ${getTotal()}</p>
 
         </div>
     )

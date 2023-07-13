@@ -1,11 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams, } from 'react-router-dom';
-import { getCategories } from '../../services/categories';
-import { getProducts } from '../../services/items';
-import { Container, Navbar } from "react-bootstrap"
+import { Container, Navbar } from "react-bootstrap";
 import { ItemList } from '../ItemList/itemList';
-import { Link, Navigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../services/Resource/Firebase';
 
@@ -82,11 +80,8 @@ const ItemListContainer = () => {
           ))}
         </Navbar.Brand>
         </Navbar>
-        
-        
+      
         <ItemList products= {products} />
-
-   
      </Container> 
     
     </>
