@@ -2,8 +2,8 @@ import React from 'react';
 import {Button, Card, Col, Container, Row} from 'react-bootstrap'
 
 
-const CartItem = ({product, deleteItem}) => {
-
+const CartItem = ({product, deleteItem, clearCart}) => {
+    
     return (
         <Card>
 
@@ -21,6 +21,7 @@ const CartItem = ({product, deleteItem}) => {
         </Col>
         <Col md={6}>
             <Button variant='danger' onClick={() => deleteItem(product.id)}>Delete</Button>
+            
         </Col>
         
         </Row>

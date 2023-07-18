@@ -12,10 +12,11 @@ const CartContainer = () => {
         <div>
         {cartArray.map(product => <CartItem key={product.id}
              product={product} deleteItem={deleteItem} />)}
-             <p className='fw-bold'>Total a pagar: ${getTotal()}</p>
+             
+             <p className='fw-bold'>Total a pagar:${getTotal()}</p>
+             <Button variant='danger' onClick={clearCart}>Vaciar Carrito</Button>
 
-            <Button variant='danger' onClick={clearCart}>Vaciar Carrito</Button>
-        </div>
+             </div>
     )
 }
 
